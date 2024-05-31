@@ -1,0 +1,158 @@
+html,body { 
+    font-size: 1.2em;
+    font-family: "Asap", sans-serif;
+    text-align: center;
+}
+
+a {
+    color: #000;
+    margin: 0.2em;
+    text-decoration: none;
+}
+
+#hangm_gameover, #hangm_victory {
+    font-size: 2em;
+}
+
+section#hangman {
+    height: 30.5em;
+    overflow: hidden;
+}
+
+#hangm {
+    text-align: center;
+}
+
+.h {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#hangm_animation {
+    height: 10em;
+    margin: 150px 0px 10px 850px;
+    position: relative;
+    width: 11em;
+
+}
+
+#hangm_word, 
+#hangm_guesses {
+    letter-spacing: 1em;
+}
+
+.man_head {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px; 
+    background: rgb(179,89,0);
+    background: radial-gradient(circle, rgba(179,89,0,1) 0%, rgba(255,203,152,1) 100%);
+    position: relative;
+    bottom: 150px;
+    left: 112px;
+	
+}
+
+.man_upper {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(126,2,245,1) 100%, rgba(0,212,255,1) 100%);
+    width: 40px;
+    height: 50px;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    left: 112px;
+    bottom: 150px;
+}
+
+.man_lower {
+    background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(126,2,245,1) 100%, rgba(0,212,255,1) 100%);
+    width: 30px;
+    height: 20px;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+    left: 117px;
+    bottom: 150px;
+}
+
+.pole_h {
+    background: #000;
+    width: 100px;
+    height: 8px;
+    position: relative;
+    left: 46px;
+}
+
+.pole_v {
+    width: 8px;
+    height: 150px;
+    background: #000;
+    left: 46px;
+    position: relative;
+}
+
+.pole_b {
+    border-color: transparent transparent #000000 transparent;
+    border-width: 0 50px 50px 50px;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    bottom: 10px;
+    position: relative;
+}
+
+.rope {
+    width: 6px;
+    height: 40px;
+    background-color: #996633;
+    position: relative;
+    bottom: 150px;
+    left: 130px;
+}
+button {
+    background: rgb(0,0,0);
+    background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(126,2,245,1) 100%, rgba(0,212,255,1) 100%);
+    color: white;
+    border-radius: 0px;
+    border: 1px solid #000;
+    padding: 0.5em;
+    margin: 0.5em;
+    cursor: pointer;
+    width: 120px;
+    height: 45px;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+.game-over {
+    color: red;
+    font-size: 34px;
+    font-weight: bold;
+   
+}
+
+.you-made-it {
+    color: green;
+    font-size: 34px;
+    font-weight: bold;
+   
+}
+#hangm_word {
+    font-size: 34px;
+    font-weight: bold;
+    color:rgba(126,2,245,1);
+  
+}
+.correct-word {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background: rgb(0,0,0);
+    background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(126,2,245,1) 100%, rgba(0,212,255,1) 100%);
+    font-size: 34px;
+    
+}
+#guess{
+    font-size: 14px;
+    
+    color: black;
+
+}

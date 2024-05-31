@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <title>Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <form id="taskForm">
+                <fieldset class="F1">
+                    <legend><h1>Add a task:</h1></legend>
+                    <input id="name" type="text" name="name" placeholder="Task name" pattern="[a-zA-Z\s']+" required maxlength="200">
+                    <br>
+                    <textarea spellcheck="true" name="description" id="description" placeholder="Description" maxlength="500" rows="10" cols="30"></textarea>
+                    <br>
+                    <div class="dates">
+                        <input id="start-date" type="date" name="start-date" placeholder="Start date" min="2024-05-21" required>
+                        <input id="end-date" type="date" name="end-date" placeholder="End date">
+                    </div>
+                    <br>
+                    <select name="person" id="person" required>
+                        <option hidden selected value="">Choose a person</option>
+                        <optgroup label="Office">
+                            <option value="Jane Green">Jane Green</option>
+                            <option value="Peter Pikna">Peter Pikna</option>
+                            <option value="Susan Boland">Susan Boland</option>
+                        </optgroup>
+                        <optgroup label="Warehouse">
+                            <option value="Robert Roland">Robert Roland</option>
+                            <option value="Tommy Preston">Tommy Preston</option>
+                            <option value="Samuel Higgins">Samuel Higgins</option>
+                            <option value="Ronald Briggs">Ronald Briggs</option>
+                        </optgroup>
+                    </select>
+                    <br>
+                    <div class="urgency">
+                        <input id="urgency" name="urgency" type="checkbox">
+                        <label for="urgency">This task is urgent</label>
+                    </div>
+                    <br>
+                    <div class="buttons">
+                        <button id="reset" type="reset">Reset</button>
+                        <button id="submit" type="submit">Add task</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="right">
+            <fieldset class="F2">
+                <legend><h1>Tasks:</h1></legend>
+                <ul id="taskList"></ul>
+            </fieldset>
+        </div>
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>

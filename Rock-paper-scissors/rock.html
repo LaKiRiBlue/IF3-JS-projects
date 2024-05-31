@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="paper.css">
+    <title>Rock-Paper-Scissors</title>
+</head>
+<header>
+    <h1>Rock - Paper - Scissors Game</h1>
+</header>
+<body>
+    <div class="container1">
+        <div class="player">
+            <h2>Player</h2>
+            <img src="rock.png" alt="rock" id="rock">
+            <img src="paper.png" alt="paper" id="paper">
+            <img src="scissors.png" alt="scissors" id="scissors">
+            <p class="player-points">0</p>
+        </div>
+        <div class="message">
+            <p class="say-it"> ⬅️Choose an option</p>
+        </div>
+        <div class="computer">
+            <h2>Computer</h2>
+            <img src="question.png" alt="Computer's choice" id="computerChoice">
+            <p class="computer-points">0</p>
+        </div>
+        
+    </div>
+
+    <div class="container2">
+        <div class="score">
+            <h2>Score:</h2>
+            <p>Player: <span id="playerScore">0</span></p>
+            <p>Computer: <span id="computerScore">0</span></p>
+        </div>
+        <div class="reset">
+            <button onclick="resetGame()">New game</button>
+        </div>
+        <div class="erase">
+            <button onclick="eraseScores()">Erase score</button>
+        </div>
+    </div>
+
+    <script defer src="scissors.js"></script> 
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Formulaire</title>
+    <link rel="stylesheet" href="./styles/global.css">
+</head>
+<body>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <!-- action : action à déclencher (soit un script PhP par exemple)
+                souvent, en js pur, on va aller désactiver cette action et plutôt faire appel à une API -->
+        <!-- method : méthode d'envoi des données
+            GET : les informations contenues dans le formulaire vont passer par l'url qui peut faire 255 caractères max (sécurité 💩)
+            POST : un objet javascript est créé avec les informations du formulaire
+                    values = { prenom = "aude", nombrePref = 12, password = "test1234" }
+        -->
+        <!-- input : balise orpheline -->
+        <!-- name : attribut important, c'est ce qui vous permet de définir 
+            - le nom dans l'url avec la valeur de l'input associé (GET)
+            - le nom de la propriété dans l'objet créé à la fin (POST)
+        -->
+
+        <fieldset>
+            <legend>Input de base (les plus utilisés)</legend>
+
+      
+        <label for="prenom" >Votre prénom :</label>
+        <!-- for : permet de relier le label à un champs (input, textarea, select...) via l'id de ce champs -->
+        <input id="prenom" type="text" name="prenom" placeholder="Dupont" pattern="[a-zA-Z]+" required maxlength="50">
+        <input type="number" name="nombrePref" min="-5" max="15">
+        <input type="email" name="email" value="aude.beurive@bstorm.be" readonly>
+        <input type="tel" name="tel" placeholder="0472 42 42 42"> <!-- sur mobile, vous ouvrira le clavier numérique -->
+        <input type="password" name="password">
+        <!-- Attention, à partir du moment où vous envoyez un fichier, votre formulaire doit avoir en attribut supplémentaire enctype="multipart/form-data" -->
+        <!-- En général pour les modifications/ajouts de fichier, on fait souvent un formulaire séparé pour ne pas gérer TOUTES les informations du formulaire en multipart -->
+        <!-- accept : pour n'accepter que certains types de fichier
+             https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept -->
+        <input type="file" name="avatar" multiple accept="application/pdf">
+        <input type="date" name="dateNaissance" >
+ 
+        <textarea spellcheck name="commentaire" id="" rows="6" col="2"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Les checkbox et les radios</legend>
+     
+        <br>
+        <input id="sales-conditions" name="sales-conditions" type="checkbox">
+        <label for="sales-conditions">Accepter TOUTES les conditions de vente 😈</label>
+        <input id="rgpd-conditions" name="rgpd-conditions" type="checkbox">
+        <label for="rgpd-conditions">Accepter qu'on revende TOUTES vos données 😈</label>
+
+        <br>
+        <!-- Pour les input type radio :
+        Doivent partager le même name
+        Doivent avoir une value -->
+        <!-- gender : "f" -->
+        <!-- name : value -->
+        <p>Votre genre :</p>
+        <input id="female" type="radio" name="gender" required value="f">
+        <label for="female">Femme</label>
+        <br>
+        <input id="male" type="radio" name="gender" value="h">
+        <label for="male">Homme</label>
+        <br>
+        <input id="other" type="radio" name="gender" value="o">
+        <label for="other">Autre</label>
+        <br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Le select</legend>
+      
+        <label for="techno">Votre question concerne la technologie :</label>
+        <select name="techno" id="techno" required>
+            <!-- selected : option sélectionnée quand on arrive sur la page
+                 hidden : sera caché dans le menu déroulant -->
+            <option hidden selected value="">Choisissez une techno...</option>
+            <optgroup label="Front">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JS</option>
+            </optgroup>
+            <optgroup label="Back">
+                <option value="csharp">C#</option>
+            </optgroup>
+        </select>    
+    </fieldset>
+
+
+        <!-- déclenche le fom (action + method) -->
+        <input type="submit" value="Envoyer"> 
+        <!-- boutton qui ne déclenche le form -->
+        <input type="button" value="Faire un truc" disabled>
+        <!-- vide votre formulaire -->
+        <input type="reset" value="Vider">
+
+        <!-- Attention ! -->
+        <!-- Un button se trouvant dans une balise form aura le type submit par défaut -->
+        <button>Envoyer</button>
+        <!-- Du coup, si je veux un button qui fait du button -->
+        <button type="button">Faire un truc</button>
+
+        <!-- Attributs -->
+        <!-- Placeholder : Indication dans le champs (si place) sur ce qu'il faut remplir, disparait quand on tape -->
+        <!-- Required : Forcer une entrée pour un champs -->
+        <!-- Readonly : Champs en lecture seule, je ne peux pas modifier la valeur par contre, j'ai toujours le focus sur l'élément (À la validation du form, le champs sera présent dans l'objet final)-->
+        <!-- Disabled : Champs désactivé, je ne peux pas modifier la valeur (je n'ai même plus le focus sur le champs) (! À la validation du form, le champs ne sera pas présent dans l'ojet final)-->
+    </form>
+
+</body>
+</html>
