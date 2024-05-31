@@ -1,0 +1,307 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Dancing Script", cursive;
+
+}
+body {
+    margin: 0;
+    overflow: hidden; 
+
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-image: url(sea.jpg);
+    background-position: -123px 2170px;
+}
+li {
+    list-style: none;
+    font-size: 3rem;
+    color: white;
+}
+h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    animation: sorry4urEyes 5s infinite;
+}
+@keyframes sorry4urEyes {
+    5% {
+        background-color: chartreuse;
+    }
+    15% {
+        background-color: aqua;
+    }
+    26% {
+        background-color: cornflowerblue;
+    }
+    42% {
+        background-color: darkorchid;
+    }
+    60% {
+        background-color: rgb(0, 0, 0);
+    }
+    100% {
+        background-color: rgb(13, 9, 245);
+    }
+}
+
+@keyframes combinedAnimation {
+    0% {
+        transform: translateY(0) rotateX(0);
+    }
+    10% {
+        transform: translateY(-15px) rotateX(0);
+    }
+    20% {
+        transform: translateY(0) rotateX(0);
+    }
+    30% {
+        transform: translateY(0) rotateZ(120deg);
+    }
+    40% {
+        transform: translateY(0) rotateZ(240deg);
+    }
+    50% {
+        transform: translateY(0) rotateZ(360deg);
+    }
+    60% {
+        transform: translateY(-10px) rotateZ(360deg);
+    }
+    70% {
+        transform: translateY(0) rotateZ(360deg);
+    }
+    80% {
+        transform: translateY(0) rotateZ(240deg);
+    }
+    90% {
+        transform: translateY(0) rotateZ(120deg);
+    }
+    100% {
+        transform: translateY(0) rotateZ(0);
+    }
+}
+@keyframes swimming{
+    0%{
+        transform: translateX(0);
+    }
+    
+    100%{
+        transform: translateX(100vw);
+       
+    }
+}
+
+
+
+.logo {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+}
+
+#sharky {
+    width: 100%;
+    height: 100%;
+    animation: combinedAnimation 5s infinite;
+    transform-style: preserve-3d; 
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url(underwater.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+
+}
+
+
+nav ul {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    list-style: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(1,232,171);
+    background: linear-gradient(270deg, rgba(1,232,171,1) 0%, rgba(152,204,255,1) 100%);
+    padding: 10px 0; 
+}
+#fishy{
+    animation: swimming 12s infinite;
+    position: relative;
+    top: 0px;
+    left: 50px;
+}
+
+#front-card {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    position: relative;
+    background-image: url('jelly1.jpg');
+    background-size: cover;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+
+
+@keyframes flipVertical {
+    0% {
+        transform:  rotateY(0); 
+    }
+    50% {
+        transform:  rotateY(180deg);
+    }
+    100% {
+        transform:  rotateY(0); 
+    }
+}
+
+#front-card:hover {
+    transform: rotateY(180deg);
+}
+#front-card .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-image: url('jelly2.jpg');
+    background-size: cover;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+#front-card .front {
+    backface-visibility: hidden;
+}
+
+
+#front-card img {
+    opacity: 0;
+    width: 200px;
+    height: 300px; 
+    
+}
+#front-card.flip .back {
+    display: block; 
+    opacity: 1; 
+}
+
+#front-card:after {
+    content: "";
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('jelly2.jpg'); 
+    background-size: cover;
+    opacity: 0;  
+}
+
+
+
+
+@keyframes scale-up-swim-left {
+    0% {
+      transform: scaleY(0.4) translateX(0);
+      transform-origin: 0% 100%;
+    }
+    100% {
+      transform: scaleY(1) translateX(-100vw); 
+      transform-origin: 0% 100%;
+    }
+  }
+  
+  .whale-container {
+    position: relative;
+    overflow: hidden; 
+    height: 100vh; 
+  }
+  
+  #whale {
+    position: absolute;
+    bottom: 20%; 
+    right: 50px; 
+    animation: scale-up-swim-left 5s linear infinite;
+    z-index: 10; /*whale is above other elements */
+  }
+  
+  @keyframes move-and-pulsate {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(50vh) rotate(180deg) scale(0.5);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg) scale(0.2);
+    }
+}
+
+#octopus {
+    position: fixed;
+    top: 0;
+    left: 70%;
+    transform: translateX(-50%);
+    animation: move-and-pulsate 12s infinite;
+    z-index: 2; 
+    width: 100px; 
+    height: auto;
+}
+@keyframes bounce {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(calc(100vw - 100px), 0);
+    }
+    50% {
+        transform: translate(calc(100vw - 100px), calc(100vh - 100px));
+    }
+    75% {
+        transform: translate(0, calc(100vh - 100px));
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#puffer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px; 
+    height: 100px; 
+    animation: bounce 15s linear infinite;
+    z-index: 10;
+}
+
+#puffer img {
+    width: 70%;
+    height: auto;
+}

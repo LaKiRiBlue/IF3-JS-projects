@@ -1,0 +1,27 @@
+table, th, td {
+    border : 1px solid black;
+    /* 2 façons de régler le soucis de bordure */
+    /* Retenez celle ci : (fusionne les bordures pour en avoir une seule)*/
+    border-collapse: collapse;
+
+    /* Retenez pas elle, c'est dégueu (va coller les bordures l'une à l'autre) */
+    /* border-spacing: 0; */
+
+    caption-side: bottom;
+
+    /* Bad news : On ne peut pas mettre d'arrondi sur les bordures du tableau, on devra tricher et englober notre tableau dans une div qui, elle, aura une bordure arrondie */
+    border-radius: 2rem; 
+}
+
+td,th {
+    height: 75px;
+    width: 150px;
+    /* Aligne sur l'axe horizontal : par défaut left */
+    text-align: center; 
+    /* Aligne sur l'axe vertical : par défaut center */
+    vertical-align: top; /* | text-top | center | middle | bottom */ 
+
+    /* Vous avez le droit de toucher au padding */
+    padding-top: 1rem;
+    /* Attention : pas de margin */
+}

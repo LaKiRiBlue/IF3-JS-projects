@@ -1,0 +1,93 @@
+body {
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.content {
+    width: 80%;
+    height: 50vh;
+    margin: auto;
+    overflow: hidden;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 45%;
+    height: 45vh;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-collapse: collapse;
+    box-shadow: 9px 9px 8px white;
+}
+
+table, th, td {
+    border: 1px solid white;
+}
+
+th, td {
+    padding: 10px;
+}
+
+thead {
+    background-color: #444;
+}
+
+.color {
+    background-color: red;
+}
+
+.red-column {
+    background-color: red;
+}
+
+/* Zebra stripes for the second table */
+.two tbody tr:nth-child(odd) {
+    background-color: #4e4e4e;
+}
+
+#Zuzana {
+    background-image: url('avataaars1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+#John {
+    background-image: url('avataaars2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+#Jin {
+    background-image: url('avataaars3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+#Dale {
+    background-image: url('avataaars4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}

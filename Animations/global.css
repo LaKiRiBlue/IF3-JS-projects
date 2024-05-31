@@ -1,0 +1,186 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.transformations, .animations {
+    width: 90%;
+    height: 45% ;
+    margin: auto;
+    background-color: whitesmoke;
+
+}
+
+.transformations {
+    .content {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+
+        .rotation:hover {
+            /* Rotate prend en param les degrès de la rotation */
+            /* Nombre négatif, sens inverse des aiguilles d'une montre */
+            /* Nombre positif, sens des aiguilles d'une montre */
+            transform: rotate(35deg) ; 
+            transition: transform 2s ease-in-out 0s;
+            /* transition : surquoi durée effet délais */
+            /* surquoi : sur la transformation, si c'est sur une animation, on mettra son nom */
+            /* durée : en combien de temps se fait la transition */
+            /* effet :
+                linear : mettre effet de transition tout le long
+                ease-in : long au début, vit sur la fin 
+                ease-out : vite sur le début, long à la fin
+                ease-in-out : long au début, vite au milieu, long à la fin
+                cubic-bezier : courbe de bézier à personnaliser pour avoir l'effet désiré
+            */
+            /* délais : le temps avant le déclenchement */
+        }
+        .scalation:hover {
+            /* Scale prend en param un pourcentage par rapport à l'élément */
+            /* 100% c'est 100% de la taille de l'élem donc pas de changement */
+            /* < 100% -> rétrécissement */
+            /* > 100% -> agrandissement */
+            transform: scale(150%);
+            /* scaleX -> va agrandir sur l'axe horizontal */
+            /* scaleY -> va agrandir sur l'axe vertical */
+            transition: transform 0.75s ease-in-out 0s;
+
+        }
+        .movation:hover {
+            /* translate prend en param de combien l'élément doit bouger (px, rem, % etc */
+            /* translate(x, y) */
+            /* translateX() -> axe horizontal -> positif : droite -> négatif : gauche */
+            /* translateY() -> axe vertical -> positif : bas -> négatif : haut */
+            transform: translateX(20px);
+            transition: transform 0.5s ease-in 0s;
+
+        }
+    }
+}
+
+.animations {
+    .content {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        /* exemple 1 */
+        .dead-eyes:hover {
+            /* animation : name time curve delay iteration direction */
+            animation : sorry4urEyes 4s linear 0s infinite normal ;
+
+        }
+
+        /* exemple 2 */
+        .spin:hover {
+            animation-name: spinner;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            animation-delay: 0.5s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+        }
+
+        /* exemple 3 */
+        .slide:hover {
+            animation: slide-looping 2s linear 0s infinite backwards;
+        }
+    }
+}
+
+.square {
+    width: 2rem;
+    height: 2rem;
+    background-color: tomato;
+}
+
+@keyframes sorry4urEyes {
+    5% {
+        background-color: chartreuse;
+    }
+    15% {
+        background-color: aqua;
+    }
+    26% {
+        background-color: cornflowerblue;
+    }
+    42% {
+        background-color: darkorchid;
+    }
+    60% {
+        background-color: deeppink;
+    }
+    100% {
+        background-color: darkgreen;
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(90deg) ;
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform : rotate(360deg)
+    }
+}
+
+@keyframes slide-looping{
+    20%{
+        transform: translateX(25px);
+    }
+    25%{
+        transform: translate(25px, -5px) ;
+        /* transform: translateX(25px);
+        transform: translateY(-5px); */
+    }
+    27%{
+        transform: translate(25px, 0px);
+        /* transform: translateX(25px);
+        transform: translateY(0); */
+    }
+    50%{
+        transform: translateX(50px);
+    }
+    75%{
+        transform: translateX(55px);
+    }
+    90%{
+        transform: translateX(55px);
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: translateX(55px);
+        transform: rotate(90deg);
+    }
+}
+
+/* Liens utiles pour les générateurs d'animations */
+/* Le plus complet */
+/* https://animista.net/play/basic/swing/swing-bottom-right-fwd */
+/* Quelques animations assez basiques */
+/* https://webcode.tools/css-generator/keyframe-animation */

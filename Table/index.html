@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les tableaux</title>
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+    <!-- Tableau de base -->
+    <table> <!-- Définir le tableau -->
+        <caption>Mon carnet d'anniversaires</caption>
+        <tr> <!-- Une ligne du tableau -->
+            <th>Nom</th> <!-- Cellule d'en-tête-->
+            <th>Prénom</th>
+            <th>Date de Naissance</th>
+        </tr>
+        <tr>
+            <td>Strimelle</td> <!-- Cellule classique -->
+            <td>Aurélien</td>
+            <td>1/11/1989</td>
+        </tr>
+        <tr>
+            <td>Ly</td>
+            <td>Khun</td>
+            <td>6/5/1982</td>
+        </tr>
+    </table>
+
+    <!-- Tableau évolué -->
+    <table>
+        <!-- Peu importe l'ordre dans lequel vous les mettez dans le html (essayez quand même quand les écrire dans l'ordre, on s'y retrouve mieux), le thead sera toujours en haut, suivi du tbody et enfin, du tfoot -->
+        <!-- Header du tableau -->
+        <thead>
+            <tr> 
+                <th>Nom Produit</th>
+                <th>Quantité</th>
+                <th>Prix</th>
+            </tr>
+        </thead>
+        <!-- Corps du tableau : Sur la plupart des navigateurs, si oublié, se rajoute auto -->
+        <tbody>
+            <tr>
+                <td>Café</td> <!-- Cellule classique -->
+                <td>2</td>
+                <!-- <td>2.50€</td> -->
+                <td rowspan="2">2.50€</td>
+            </tr>
+            <tr>
+                <td>Matcha Latte</td>
+                <td>1</td>
+                <!-- <td>4€</td> --> <!-- il faut penser à l'enlever en cas de rowspan -->
+            </tr>
+        </tbody>
+         <!-- Pied du tableau : Utilisé au besoin par exemple pour les totaux -->
+         <tfoot>
+            <tr>
+                <td colspan="2"> Total :</td>
+                <td>9€</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
