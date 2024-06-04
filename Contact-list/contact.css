@@ -1,0 +1,38 @@
+body{
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: rgb(202, 233, 243);
+}
+table{
+    width: 100%;
+    margin-top: 50px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+tbody tr:nth-child(odd){
+    background-color: #ffffff;
+
+}
+tbody tr:nth-child(even){
+    background-color: #cafcf3;
+}
+th{
+    background-color: #564caf;
+    color: white;
+}
+th, td{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+.contact-list{
+height: 90vh;
+}

@@ -47,6 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     displayCities(CITIES); 
 
+    document.getElementById('refresh').addEventListener('click', () => {
+        window.location.reload();
+    });
     submitButton.addEventListener('click', () => {
         const selectedContinent = choiceOfContinent.value;
         const filteredCities = CITIES.filter(city => city.continent === selectedContinent);
@@ -93,11 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// const resetButton = document.getElementById('reset-button');
 
-// resetButton.addEventListener('click', () => {
-//     location.reload(); // Reload the page
-// });
 
 
 

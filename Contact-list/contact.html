@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-list</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="contact.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-list">
+            <h1>Contact List</h1>
+            <div class="search">
+                <input type="text" id="search" placeholder="Search">
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name <button onclick="sortTable(0, 'asc')" class="arrow-up">⬆️</button><button onclick="sortTable(0, 'desc')" class="arrow-down">⬇️ </button></th>
+                            <th>Surname <button onclick="sortTable(1, 'asc')" class="arrow-up">⬆️</button><button onclick="sortTable(1, 'desc')" class="arrow-down">⬇️</button></th>
+                            <th>Date of birth <button onclick="sortTable(2, 'asc')" class="arrow-up">⬆️</button><button onclick="sortTable(2, 'desc')" class="arrow-down">⬇️</button></th>
+                            <th>Telephone</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>21/01/1990</td>
+                            <td>546458940</td>
+                        </tr>
+                        <tr>
+                            <td>Jane</td>
+                            <td>Stratton</td>
+                            <td>05/05/1978</td>
+                            <td>789264031</td>
+                        </tr>
+                        <tr>
+                            <td>Peter</td>
+                            <td>Smith</td>
+                            <td>16/10/1989</td>
+                            <td>123894312</td>
+                        </tr>
+                        <tr>
+                            <td>Minnie</td>
+                            <td>Bergmann</td>
+                            <td>18/08/1995</td>
+                            <td>090541238</td>
+                        </tr>
+                        <tr>
+                            <td>Bray</td>
+                            <td>Wyatt</td>
+                            <td>12/11/1982</td>
+                            <td>047023698</td>
+                        </tr>
+                        <tr>
+                            <td>Connie</td>
+                            <td>Johnson</td>
+                            <td>13/03/2001</td>
+                            <td>186437823</td>
+                        </tr>
+                        <tr>
+                            <td>Dan</td>
+                            <td>Williams</td>
+                            <td>04/04/1999</td>
+                            <td>002587169</td>
+                        </tr>
+                        <tr>
+                            <td>Vilma</td>
+                            <td>Peterson</td>
+                            <td>29/04/1979</td>
+                            <td>999638741</td>
+                        </tr>
+                        <tr>
+                            <td>Olivia</td>
+                            <td>Jones</td>
+                            <td>01/02/1990</td>
+                            <td>195969497</td>
+                        </tr>
+                        <tr>
+                            <td>Sam</td>
+                            <td>Jones</td>
+                            <td>29/02/1991</td>
+                            <td>285711111</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
